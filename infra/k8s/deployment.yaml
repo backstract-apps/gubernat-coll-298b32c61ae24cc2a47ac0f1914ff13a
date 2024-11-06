@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gubernat-coll-298b32c61ae24cc2a47ac0f1914ff13a-depl
+  labels:
+    app: gubernat-coll-298b32c61ae24cc2a47ac0f1914ff13a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gubernat-coll-298b32c61ae24cc2a47ac0f1914ff13a
+  template:
+    metadata:
+      labels:
+        app: gubernat-coll-298b32c61ae24cc2a47ac0f1914ff13a
+    spec:
+      containers:
+        - name: gubernat-coll-298b32c61ae24cc2a47ac0f1914ff13a
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:gubernat-coll-298b32c61ae24cc2a47ac0f1914ff13a
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9023
